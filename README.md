@@ -29,3 +29,34 @@ A full-stack MERN (MongoDB, Express, React, Node.js) **Hotel Booking Web Applica
 
 ## 📁 Folder Structure
 
+
+hotel-booking/
+├── backend/
+│ ├── routes/
+│ ├── models/
+│ ├── controllers/
+│ ├── .env
+│ └── index.js
+├── frontend/
+│ ├── src/
+│ │ ├── pages/
+│ │ ├── booking/
+│ │ ├── room/
+│ │ ├── data/
+│ │ ├── loginPage/
+│ │ ├── components/
+│ │ └── App.js
+│ └── tailwind.config.js
+└── README.md
+
+
+
+---
+
+## 🚀 Getting Started
+
+### Clone the Repository
+```bash
+git clone https://github.com/Ajay-rawat-op/hotel-booking.git
+cd hotel-booking
+
