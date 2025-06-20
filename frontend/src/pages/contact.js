@@ -98,8 +98,8 @@ const Contact = () => {
         <h3 className="text-2xl font-semibold text-gray-800 mb-4">Find Us on the Map</h3>
         <div className="rounded-xl overflow-hidden shadow-lg">
           <iframe
-            title="Map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193967.92409027475!2d-74.11808640784292!3d40.71277651099233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a19fbd715d9%3A0x7f20a65e099d4aef!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2suk!4v1611346786638!5m2!1sen!2suk"
+            title="India Map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45337159.28763261!2d61.01518799089716!3d20.14690874972785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3045511f0d63ef27%3A0x7e65c8b1c2de0e99!2sIndia!5e0!3m2!1sen!2sin!4v1629876543210!5m2!1sen!2sin"
             className="w-full h-72 border-0"
             allowFullScreen=""
             loading="lazy"
@@ -108,55 +108,57 @@ const Contact = () => {
       </div>
 
       {/* Modal with animation */}
-      {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center px-4">
-          <div className="bg-white rounded-xl max-w-md w-full p-6 relative shadow-lg animate-[fadeInScale_0.3s_ease-out]">
-            <button
-              onClick={() => setIsModalOpen(false)}
-              className="absolute top-3 right-4 text-gray-500 hover:text-red-600 text-xl"
-            >
-              &times;
-            </button>
-            <h2 className="text-2xl font-semibold text-[#000000] mb-4">Send a Message</h2>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black-500"
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black-500"
-              />
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                rows="4"
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black-500"
-              ></textarea>
+      {
+        isModalOpen && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center px-4">
+            <div className="bg-white rounded-xl max-w-md w-full p-6 relative shadow-lg animate-[fadeInScale_0.3s_ease-out]">
               <button
-                type="submit"
-                className="bg-[#000000] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition"
+                onClick={() => setIsModalOpen(false)}
+                className="absolute top-3 right-4 text-gray-500 hover:text-red-600 text-xl"
               >
-                Submit
+                &times;
               </button>
-            </form>
+              <h2 className="text-2xl font-semibold text-[#000000] mb-4">Send a Message</h2>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black-500"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black-500"
+                />
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows="4"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black-500"
+                ></textarea>
+                <button
+                  type="submit"
+                  className="bg-[#000000] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
           </div>
-        </div>
-      )}
-    </div>
+        )
+      }
+    </div >
   );
 };
 

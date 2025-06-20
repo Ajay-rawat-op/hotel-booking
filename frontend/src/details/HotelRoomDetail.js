@@ -7,9 +7,8 @@ const HotelRoomDetail = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    // Check login status from cookie/localStorage
-    const token = localStorage.getItem("token"); // or use a cookie parser if using cookies
-    setIsLoggedIn(!!token); // true if token exists
+    const token = localStorage.getItem("token");
+    setIsLoggedIn(!!token);
   }, []);
 
   if (!state) {
@@ -78,7 +77,7 @@ const HotelRoomDetail = () => {
               )}
 
               <button
-                onClick={() => navigate('/')}
+                onClick={() => navigate('/roomgallery')}
                 className="px-6 py-3 bg-transparent border-2 border-[#1e4d4f] text-[#1e4d4f] rounded-full hover:bg-[#1e4d4f] hover:text-white transition font-medium shadow-sm"
               >
                 Back to Gallery

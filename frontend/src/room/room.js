@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import Header from '../header/header';
 import { useFavorites } from './FavoriteContext';
-import rooms from '../data/roomData'; 
+import rooms from '../data/roomData';
 
 const RoomGallery = () => {
   const navigate = useNavigate();
@@ -16,7 +16,7 @@ const RoomGallery = () => {
         <h1 className="text-4xl font-serif font-bold text-center text-gray-800 mb-4">
           The Rawat ji Luxury Residences Hotel
         </h1>
-        <h2 className="text-2xl text-center text-gray-500 mb-12">Rooms & Suites</h2>
+        <h2 className="text-2xl text-center font-satisfy text-gray-500 mb-12">Rooms & Suites</h2>
 
         <div className="max-w-9xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {rooms.map((room, index) => (

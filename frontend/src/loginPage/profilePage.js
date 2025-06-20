@@ -6,8 +6,7 @@ export default function ProfilePage() {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
-
-    // Utility function to validate user object
+    // Function to validate user data structure
     const isValidUser = (data) => {
         return (
             typeof data === "object" &&

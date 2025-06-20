@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom"; 
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Header from "../header/header";
 
@@ -11,7 +11,7 @@ export default function SignUpPage() {
     confirmPassword: "",
   });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-  const navigate = useNavigate();  // For navigation after successful signup
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData((prev) => ({
@@ -38,7 +38,6 @@ export default function SignUpPage() {
       if (res.status === 200) {
         alert("Account created successfully!");
 
-        // Clear form fields by resetting state
         setFormData({
           fullName: "",
           email: "",
@@ -46,13 +45,11 @@ export default function SignUpPage() {
           confirmPassword: "",
         });
 
-        // Set the form submission flag to show success message
         setIsFormSubmitted(true);
 
-        // Optionally, redirect to the login page after a brief delay
         setTimeout(() => {
-          navigate("/loginPage"); // Redirect to login page
-        }, 2000); // Delay before redirecting (optional)
+          navigate("/loginPage");
+        }, 2000);
       }
     } catch (error) {
       console.error(error.message);
@@ -62,7 +59,7 @@ export default function SignUpPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-yellow-50 to-white">
-      <Header/>
+      <Header />
       <div className="flex flex-col md:flex-row w-full max-w-5xl bg-white rounded-2xl shadow-2xl overflow-hidden border border-yellow-100">
 
         {/* Left Side - Image Section */}
@@ -82,7 +79,6 @@ export default function SignUpPage() {
         {/* Right Side - Signup Form */}
         <div className="w-full md:w-1/2 p-10 bg-white">
           {isFormSubmitted ? (
-            // Show success message after successful submission
             <div className="flex items-center justify-center p-5 bg-green-100 text-green-600 font-semibold text-lg rounded-xl shadow-lg max-w-md mx-auto my-8 space-x-3 animate__animated animate__fadeIn">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />

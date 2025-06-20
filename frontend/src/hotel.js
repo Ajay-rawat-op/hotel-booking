@@ -57,7 +57,7 @@ const Hotel = () => {
                     </p>
                     <button
                       onClick={() => navigate('/roomgallery')}
-                      className="bg-yellow-400 text-black font-semibold py-3 px-8 rounded-full shadow-md hover:bg-yellow-500 hover:scale-105 transition-transform duration-300"
+                      className="bg-yellow-400 text-black font-dancing text-lg bold py-3 px-8 rounded-full shadow-md hover:bg-yellow-500 hover:scale-105 transition-transform duration-300"
                     >
                       View Rooms
                     </button>

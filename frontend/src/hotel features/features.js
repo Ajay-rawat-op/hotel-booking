@@ -17,17 +17,27 @@ const Hotelfeatures = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndexes((prev) =>
-        prev.map((idx, i) =>
-          (idx + 1) % features[i].images.length
-        )
+        prev.map((idx, i) => (idx + 1) % features[i].images.length)
       );
-    }, 2000); // Change image every 3 seconds
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="h-[99vh] overflow-y-scroll bg-white py-16 px-4 sm:px-6 lg:px-16 space-y-12">
+      
+      {/* 🔥 Heading Section Added Here */}
+      <div className="text-center">
+        <h1 className="text-3xl sm:text-4xl font-heading  text-lg text-gray-800 mb-2">
+          Our Hotel Features
+        </h1>
+        <p className="text-gray-600 max-w-xl mx-auto font-rancho text-lg">
+          Discover the best of what we offer — comfort, luxury, and unforgettable experiences.
+        </p>
+      </div>
+
+      {/* Features List */}
       <div className="max-w-5xl mx-auto space-y-12">
         {features.map((item, idx) => (
           <div
@@ -41,15 +51,16 @@ const Hotelfeatures = () => {
                 alt={item.title}
                 onError={(e) => {
                   e.target.onerror = null;
-                  e.target.src = "https://via.placeholder.com/800x600?text=Image+Unavailable";
+                  e.target.src =
+                    "https://via.placeholder.com/800x600?text=Image+Unavailable";
                 }}
                 className="w-full h-72 object-cover rounded-xl shadow-lg transition-all duration-500"
               />
             </div>
             <div className="w-full lg:w-1/2 mt-6 lg:mt-0 lg:px-12 text-center lg:text-left">
               <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">{item.tag}</p>
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">{item.title}</h2>
-              <p className="text-gray-600 mb-4">{item.description}</p>
+              <h2 className="text-2xl font-heading text-gray-800 mb-4">{item.title}</h2>
+              <p className="text-gray-600 mb-4 font-rancho">{item.description}</p>
               <button
                 className="bg-[#a67c52] hover:bg-[#916845] text-white px-5 py-2 rounded-md transition"
                 onClick={() =>

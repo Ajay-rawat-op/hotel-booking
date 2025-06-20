@@ -1,10 +1,9 @@
-// routes/bookingRoutes.js
+
 import express from 'express';
 import Booking from '../models/bookingModel.js';
 
 const router = express.Router();
 
-// POST /api/bookings
 router.post("/", async (req, res) => {
   try {
     const newBooking = new Booking(req.body);

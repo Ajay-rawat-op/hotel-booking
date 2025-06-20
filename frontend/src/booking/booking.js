@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import Header from "../header/header"; // update path as needed
+import Header from "../header/header";
 
 const BookingForm = () => {
   const [checkIn, setCheckIn] = useState("");

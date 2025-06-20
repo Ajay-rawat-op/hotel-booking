@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import { motion } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import testimonials from "../data/testimonials"; // ✅ Imported data
+import testimonials from "../data/testimonials";
 
 const TestimonialSlider = () => {
   const settings = {

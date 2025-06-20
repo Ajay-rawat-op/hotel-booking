@@ -10,13 +10,11 @@ const NewsPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [debouncedSearch, setDebouncedSearch] = useState("");
 
-  // ✅ Debounce input
   useEffect(() => {
     const timer = setTimeout(() => setDebouncedSearch(searchTerm), 500);
     return () => clearTimeout(timer);
   }, [searchTerm]);
 
-  // ✅ Stable fetch function
   const fetchNews = useCallback(async () => {
     setLoading(true);
     try {
@@ -31,7 +29,6 @@ const NewsPage = () => {
     setLoading(false);
   }, [category, debouncedSearch, searchTerm]);
 
-  // ✅ useEffect uses stable fetchNews
   useEffect(() => {
     fetchNews();
     const interval = setInterval(fetchNews, 60000);

@@ -1,4 +1,3 @@
-// src/components/Experience.js
 
 const Experience = () => {
   return (

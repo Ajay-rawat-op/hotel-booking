@@ -1,4 +1,3 @@
-// src/data/sliderContents.js
 
 const sliderContents = [
   {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../header/header';
-import { useFavorites } from './FavoriteContext'; // ✅ fixed path if you put context in /context
+import { useFavorites } from './FavoriteContext'; 
 
 const defaultRooms = [
   {

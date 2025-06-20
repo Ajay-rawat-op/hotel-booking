@@ -1,5 +1,4 @@
-// src/data/roomData.js
-
+// This file contains an array of room objects, each with a name, price, and image URL.
 const rooms = [
   {
     name: 'Junior Room',

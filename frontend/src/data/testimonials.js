@@ -1,4 +1,3 @@
-// src/data/testimonials.js
 
 const testimonials = [
   {
