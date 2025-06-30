@@ -38,7 +38,7 @@ const RoomGallery = () => {
                 </div>
                 <div className="flex justify-between items-center mt-1">
                   <p className="text-[#1e4d4f] text-xl font-bold">
-                    ${room.price}
+                    ₹{room.price}
                     <span className="text-sm text-gray-500 font-normal">/night</span>
                   </p>
                   <button
