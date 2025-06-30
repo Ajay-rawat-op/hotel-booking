@@ -2,6 +2,8 @@
 
 A fully responsive hotel booking website built using the **MERN Stack** (MongoDB, Express.js, React, Node.js). This platform allows users to browse hotel rooms, make bookings, and manage reservations efficiently.
 
+"This project is a hotel booking website where users can explore hotel rooms, book them by filling out a form, and manage their bookings easily. It's built using modern technologies like React for the frontend and Node.js with MongoDB for storing booking information."
+
 ---
 
 ## ✨ Features
