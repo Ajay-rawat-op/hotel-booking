@@ -1,8 +1,8 @@
 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Hotel from './hotel.js';
 import RoomGallery from './room/room.js';
 import BookingForm from './booking/booking.js';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Contact from './pages/contact.js';
 import NewsPage from './pages/newz.js';
 import HotelRoomDetail from './details/HotelRoomDetail.js';

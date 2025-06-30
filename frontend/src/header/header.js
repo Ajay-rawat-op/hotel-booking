@@ -37,7 +37,7 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 z-50 w-full bg-gradient-to-r from-black/50 to-gray-800/60 backdrop-blur-md shadow-lg flex justify-between items-center px-4 sm:px-6 lg:px-20 py-3 transition-all duration-300 font-body">
       {/* Logo */}
-      <h1 className="text-3xl sm:text-4xl font-bold font-satisfy tracking-widest text-yellow-400">
+      <h1 className="text-3xl sm:text-4xl font-bold font-dancing tracking-widest text-yellow-400">
         Rawat ji
       </h1>
 
